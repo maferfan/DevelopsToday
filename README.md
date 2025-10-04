@@ -17,19 +17,21 @@ Uses **SQLite** via Prisma ORM for a lightweight, zero-config local database —
 
 ## 📁 Project Structure
 
+```
 quiz-builder/
-├── backend/ # API with Express + Prisma (SQLite)
-│ ├── src/
-│ ├── prisma/
-│ ├── package.json
-│ └── tsconfig.json
+├── backend/              # API with Express + Prisma (SQLite)
+│   ├── src/
+│   ├── prisma/
+│   ├── package.json
+│   └── tsconfig.json
 │
-├── frontend/ # React + Vite + Tailwind frontend
-│ ├── src/
-│ ├── public/
-│ ├── package.json
-│ └── vite.config.ts
+├── frontend/             # React + Vite + Tailwind frontend
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.ts
 └── README.md
+```
 
 
 ---
