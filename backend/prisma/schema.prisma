@@ -1,0 +1,32 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Quiz {
+  id        Int        @id @default(autoincrement())
+  title     String
+  questions Question[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Question {
+  id        Int           @id @default(autoincrement())
+  type      QuestionType
+  prompt    String
+  options   String        // JSON: '["opt1","opt2"]' ou '[]'
+  answers   String        // JSON: '["true"]', '["Paris"]', '["A","C"]'
+  quiz      Quiz          @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  quizId    Int
+}
+
+enum QuestionType {
+  BOOLEAN
+  INPUT
+  CHECKBOX
+}
