@@ -60,7 +60,6 @@ DATABASE_URL="file:./dev.db"
 From the backend folder, run:
 
 bash
-Copy
 cd backend
 npx prisma generate
 npx prisma migrate dev --name init
@@ -155,7 +154,3 @@ Visualize/edit data:
 bash
 Copy
 npx prisma studio
-👤 Author
-Developed as a technical test project showcasing a fullstack setup with React, Node.js, Prisma, and SQLite for rapid prototyping.
-
-Author: DevelopsToday
