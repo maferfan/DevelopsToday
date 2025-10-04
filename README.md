@@ -126,6 +126,7 @@ TailwindCSS
 React Hook Form + Zod
 Axios
 React Router DOM
+
 Backend
 Node.js + Express
 TypeScript
@@ -141,6 +142,7 @@ npm run build — Create production build
 npm run preview — Preview built app
 npm run lint — Run ESLint
 npm run format — Auto-format with Prettier
+
 Backend (/backend)
 npm run dev — Start server with ts-node-dev
 npm run build — Compile TypeScript
@@ -148,10 +150,12 @@ npm start — Run compiled server
 
 🪄 Tips
 Start the backend first, then the frontend.
+
 Reset the database:
 bash
 Copy
 npx prisma migrate reset
+
 Visualize/edit data:
 bash
 Copy
