@@ -94,9 +94,7 @@ http://localhost:5173
 Once the backend is running, send a POST request to seed a quiz.
 
 Endpoint: POST http://localhost:4000/api/quizzes
-
 Request Body:
-
 json
 Copy
 {
@@ -115,9 +113,11 @@ Copy
     }
   ]
 }
+
 Useful Routes
 GET /api/quizzes → Retrieve all quizzes
 GET /api/quizzes/:id → Retrieve one quiz by ID
+
 🛠️ Tech Stack
 Frontend
 React 19 + TypeScript
@@ -133,6 +133,7 @@ Prisma ORM
 SQLite (local database)
 Dotenv
 CORS
+
 📜 Available Scripts
 Frontend (/frontend)
 npm run dev — Start dev server
@@ -144,6 +145,7 @@ Backend (/backend)
 npm run dev — Start server with ts-node-dev
 npm run build — Compile TypeScript
 npm start — Run compiled server
+
 🪄 Tips
 Start the backend first, then the frontend.
 Reset the database:
