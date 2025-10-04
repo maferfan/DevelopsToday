@@ -1,69 +1,101 @@
-Quiz Builder
-Fullstack application for creating and managing quizzes, built with React + Vite (Frontend) and Node.js + Express + Prisma (Backend). The project uses SQLite as the database (via Prisma ORM), making setup fast and lightweight — ideal for testing or small-scale applications.
+# Quiz Builder
 
-Project Structure
+Fullstack application for creating and managing quizzes, built with **React + Vite** (Frontend) and **Node.js + Express + Prisma** (Backend).  
+Uses **SQLite** via Prisma ORM for a lightweight, zero-config local database — ideal for testing or small-scale apps.
+
+---
+
+## ✨ Highlights
+
+- **Frontend:** React 19 + Vite + TailwindCSS
+- **Backend:** Node.js + Express + TypeScript + Prisma
+- **Database:** SQLite (auto-created via Prisma)
+- **Validation:** React Hook Form + Zod
+- **Routing & HTTP:** React Router DOM + Axios
+
+---
+
+## 📁 Project Structure
+
 quiz-builder/
-├── backend/              # API with Express + Prisma (SQLite)
-│   ├── src/
-│   ├── prisma/
-│   ├── package.json
-│   └── tsconfig.json
+├── backend/ # API with Express + Prisma (SQLite)
+│ ├── src/
+│ ├── prisma/
+│ ├── package.json
+│ └── tsconfig.json
 │
-├── frontend/             # React + Vite + Tailwind frontend
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.ts
+├── frontend/ # React + Vite + Tailwind frontend
+│ ├── src/
+│ ├── public/
+│ ├── package.json
+│ └── vite.config.ts
 └── README.md
-Requirements
-Node.js >= 18.x
-npm >= 9.x
-Git
-You don’t need to install or configure a database manually — SQLite will create a local file automatically.
 
-Database Setup (SQLite + Prisma)
-Inside the backend folder, create a .env file with:
+
+---
+
+## ⚙️ Requirements
+
+Before starting, make sure the following are installed:
+
+- **Node.js** >= 18.x
+- **npm** >= 9.x
+- **Git**
+
+> **Note:** You don't need to install or configure a database manually — SQLite will create a local file automatically.
+
+---
+
+## 🗄️ Database Setup (SQLite + Prisma)
+
+### 1) Create `.env` in backend
+
+Create a file at `backend/.env` with:
+
+```env
 DATABASE_URL="file:./dev.db"
-Navigate to the backend folder and initialize Prisma:
+2) Initialize Prisma
+From the backend folder, run:
+
 bash
 Copy
 cd backend
 npx prisma generate
 npx prisma migrate dev --name init
-Prisma will automatically create a local SQLite database file at prisma/dev.db.
+Prisma will create a local SQLite database at prisma/dev.db.
 
-To view or edit the database, run:
-
+3) Inspect the database (optional)
 bash
 Copy
 npx prisma studio
 This opens a local web UI to inspect and edit quiz data.
 
-Starting the Application
-Run the Backend
+🚀 Starting the Application
+1) Run the Backend
 bash
 Copy
 cd backend
 npm install
 npm run dev
-Backend server will start at:
-
+Backend server:
 http://localhost:4000
-Run the Frontend
+
+2) Run the Frontend
 bash
 Copy
 cd frontend
 npm install
 npm run dev
-Frontend will run at:
-
+Frontend app:
 http://localhost:5173
-Creating a Sample Quiz
+
+🧩 Creating a Sample Quiz
 Once the backend is running, send a POST request to seed a quiz.
 
-Endpoint:
-POST http://localhost:4000/api/quizzes
+Endpoint: POST http://localhost:4000/api/quizzes
+
 Request Body:
+
 json
 Copy
 {
@@ -82,10 +114,10 @@ Copy
     }
   ]
 }
-Useful Routes:
+Useful Routes
 GET /api/quizzes → Retrieve all quizzes
-GET /api/quizzes/:id → Retrieve one quiz
-Tech Stack
+GET /api/quizzes/:id → Retrieve one quiz by ID
+🛠️ Tech Stack
 Frontend
 React 19 + TypeScript
 Vite
@@ -100,7 +132,7 @@ Prisma ORM
 SQLite (local database)
 Dotenv
 CORS
-Available Scripts
+📜 Available Scripts
 Frontend (/frontend)
 npm run dev — Start dev server
 npm run build — Create production build
@@ -111,16 +143,17 @@ Backend (/backend)
 npm run dev — Start server with ts-node-dev
 npm run build — Compile TypeScript
 npm start — Run compiled server
-Tips
+🪄 Tips
 Start the backend first, then the frontend.
-To reset the database:
+Reset the database:
 bash
 Copy
 npx prisma migrate reset
-To visualize data conveniently, use:
+Visualize/edit data:
 bash
 Copy
 npx prisma studio
-Author
+👤 Author
 Developed as a technical test project showcasing a fullstack setup with React, Node.js, Prisma, and SQLite for rapid prototyping.
-"# DevelopsToday"
+
+Author: DevelopsToday
